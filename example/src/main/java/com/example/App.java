@@ -11,10 +11,12 @@ import javafx.stage.Stage;
 public class App extends Application {
 
     private static Scene scene;
+    private static Stage stage;
     private static int[] data;
 
     @Override
     public void start(Stage stage) throws IOException {
+        App.stage = stage;
         data = new int[] { 5, 4, 3, 2, 1, 5 };
         scene = new Scene(loadFXML("input"), 640, 480);
         stage.setScene(scene);
@@ -48,8 +50,11 @@ public class App extends Application {
         return fxmlLoader.load();
     }
 
+    static Stage getStage() {
+        return stage;
+    }
+
     public static void main(String[] args) {
         launch(args);
     }
-
 }

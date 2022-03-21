@@ -10,7 +10,8 @@
    <children>
       <Label text="Input View" />
       <TextField fx:id ="text" promptText="Enter Array Component" onAction="#setArray"/>
-      <Button fx:id="AnimationButton" text="Switch to Animation View" onAction="#switchToAnimation"/>
+      <Button fx:id="animationButton" text="Switch to Animation View" onAction="#switchToAnimation"/>
+      <Button fx:id="fileButton" text="Load data from file" onAction="#fileInput"/>
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
